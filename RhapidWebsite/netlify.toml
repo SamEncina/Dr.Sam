@@ -1,0 +1,8 @@
+[build]
+  command = "echo 'No build command'"
+  publish = "/"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://dr-sam.onrender.com/api/:splat"
+  status = 200

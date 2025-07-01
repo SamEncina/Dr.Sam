@@ -1,0 +1,190 @@
+/* General Body Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+/* Header and Footer */
+header.scrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+/* Content Section */
+.content-section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+/* Careers Hero Section */
+.careers-hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.careers-hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.careers-hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Company Mission Section */
+.company-mission {
+    padding: 60px 20px;
+}
+
+.company-mission h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.company-mission p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Company Values Section */
+.company-values {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.company-values h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Open Positions Section */
+.open-positions {
+    padding: 60px 20px;
+}
+
+.open-positions h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.job-listings {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.job-listing {
+    border-bottom: 1px solid #eee;
+    padding: 25px 0;
+}
+
+.job-listing:last-child {
+    border-bottom: none;
+}
+
+.job-listing h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.job-listing p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.cta-button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+/* Employee Benefits Section */
+.employee-benefits {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.employee-benefits h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.employee-benefits p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.employee-benefits ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.employee-benefits li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    padding-left: 25px;
+    position: relative;
+}
+
+.employee-benefits li::before {
+    content: '✓';
+    color: #28a745;
+    position: absolute;
+    left: 0;
+}

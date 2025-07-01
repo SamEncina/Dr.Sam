@@ -1,0 +1,58 @@
+.signup-container {
+    background: var(--background-color);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.signup-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.signup-container p {
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+}
+
+.modern-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.modern-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.modern-form input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+}
+
+.modern-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.modern-form .cta-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
