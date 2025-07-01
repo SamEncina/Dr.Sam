@@ -10,10 +10,16 @@ const pool = new Pool({
     },
 });
 
+pool.on('error', (err, client) => {
+    console.error('Unexpected error on idle client', err);
+    process.exit(-1);
+});
+
 const connectDB = async () => {
     try {
-        await pool.connect();
+        const client = await pool.connect();
         console.log('PostgreSQL Connected...');
+        client.release();
     } catch (err) {
         console.error(err.message);
         process.exit(1);
