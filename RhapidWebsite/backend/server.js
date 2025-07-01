@@ -14,6 +14,7 @@ app.use(express.json());
 const { connectDB } = require('./config/db');
 const authRoutes = require('./api/authRoutes');
 const uploadRoutes = require('./api/uploadRoutes');
+const adminRoutes = require('./api/adminRoutes');
 
 // Connect to database
 connectDB();
@@ -26,6 +27,7 @@ app.get('/', (req, res) => {
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/admin', adminRoutes);
 
 const PORT = process.env.PORT || 5000;
 
