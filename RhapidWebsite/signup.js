@@ -1,4 +1,6 @@
-document.getElementById('signup-form').addEventListener('submit', async function(event) {
+const signupForm = document.getElementById('signup-form') || document.getElementById('rider-signup-form');
+
+signupForm.addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
 
     const name = document.getElementById('fullName').value.trim();
