@@ -4,5 +4,5 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "YOUR_RENDER_BACKEND_URL_HERE/:splat"
+  to = "https://dr-sam.onrender.com/:splat"
   status = 200
