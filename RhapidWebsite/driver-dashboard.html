@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard - Rhapid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="scrolled">
+        <nav>
+            <div class="logo"><a href="index.html"><img src="Rhapid LOGO-2 transparent.png" alt="Rhapid Logo" style="height: 40px;"></a></div>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="rider-signup.html">Ride</a></li>
+                <li><a href="signup.html">Drive</a></li>
+                <li><a href="drivers.html">Top Drivers</a></li>
+                <li><a href="rider-dashboard.html">Rider Account</a></li>
+                <li><a href="driver-dashboard.html" class="nav-cta">Driver Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="profile-summary">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" alt="User Profile" class="profile-pic">
+                <h4>John Doe</h4>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="active" data-target="dashboard-home"><a href="#">Dashboard</a></li>
+                <li data-target="earnings"><a href="#">Earnings</a></li>
+                <li data-target="ride-requests"><a href="#">Ride Requests</a></li>
+                <li data-target="profile"><a href="#">Profile</a></li>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </aside>
+        <main class="dashboard-content">
+            <div id="dashboard-home" class="dashboard-tab-content active">
+                <h1>Your Driver Dashboard</h1>
+                <section class="dashboard-section">
+                    <h2>Today's Summary</h2>
+                    <p>Welcome to your dashboard, John. Here's a quick look at your activity today.</p>
+                </section>
+
+                <section class="dashboard-section">
+                    <h2>Your Ratings</h2>
+                    <div class="driver-rating-overview">
+                        <div class="overall-rating">
+                            <p>Overall Rating</p>
+                            <span class="rating-score">4.9 <span class="star-rating">&#9733;</span></span>
+                        </div>
+                        <div class="rating-breakdown">
+                            <div class="rating-category">
+                                <p>Friendliness</p>
+                                <span class="category-score">4.9</span>
+                            </div>
+                            <div class="rating-category">
+                                <p>Cleanliness</p>
+                                <span class="category-score">5.0</span>
+                            </div>
+                            <div class="rating-category">
+                                <p>Driving</p>
+                                <span class="category-score">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <h2>Recent Feedback</h2>
+                    <div class="reviews-list">
+                        <div class="review">
+                            <div class="review-header">
+                                <strong>Jane S.</strong>
+                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </div>
+                            <p class="review-comment">"John was an amazing driver! Very friendly and the car was spotless. 10/10 would ride again."</p>
+                        </div>
+                        <div class="review">
+                            <div class="review-header">
+                                <strong>Mark L.</strong>
+                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            </div>
+                            <p class="review-comment">"Great driver, very safe and efficient. The ride was smooth and got me to my destination on time."</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="earnings" class="dashboard-tab-content">
+                <h2>Earnings</h2>
+                <p>Track your earnings and view payment history.</p>
+            </div>
+
+            <div id="ride-requests" class="dashboard-tab-content">
+                <h2>Incoming Ride Requests</h2>
+                <div class="ride-request-card" 
+                     data-rider-name="Jane Smith" 
+                     data-rider-rating="4.8" 
+                     data-avg-rating="4.9" 
+                     data-reviews='[{"driver": "Mike R.", "stars": 5, "comment": "Always polite and on time."}, {"driver": "David C.", "stars": 4, "comment": "Great passenger, clean and respectful."}]'>
+                    <div class="request-details">
+                        <div class="request-header">
+                            <h4>New Ride Request</h4>
+                        </div>
+                        <p><strong>From:</strong> 123 Main St, Cityville</p>
+                        <p><strong>To:</strong> 789 Oak Ave, Townburg</p>
+                    </div>
+                    <div class="request-actions">
+                        <button class="cta-button view-profile-button">View Profile</button>
+                        <button class="cta-button accept-button">Accept</button>
+                        <button class="cta-button decline-button">Decline</button>
+                    </div>
+                </div>
+                <div class="ride-request-card" 
+                     data-rider-name="Alex Johnson" 
+                     data-rider-rating="4.5" 
+                     data-avg-rating="4.2" 
+                     data-reviews='[{"driver": "Sarah L.", "stars": 4, "comment": "Friendly and respectful."}, {"driver": "Tom H.", "stars": 5, "comment": "Excellent conversation, very pleasant."}]'>
+                    <div class="request-details">
+                        <div class="request-header">
+                            <h4>New Ride Request</h4>
+                            <span class="recurring-badge">Recurring</span>
+                        </div>
+                        <p><strong>From:</strong> 456 Pine Ln, Suburbia</p>
+                        <p><strong>To:</strong> 101 Maple Dr, Downtown</p>
+                        <p class="recurring-details"><strong>Schedule:</strong> Mon, Wed, Fri at 9:00 AM for 3 months</p>
+                    </div>
+                    <div class="request-actions">
+                        <button class="cta-button view-profile-button">View Profile</button>
+                        <button class="cta-button accept-button">Accept</button>
+                        <button class="cta-button decline-button">Decline</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile" class="dashboard-tab-content">
+                <h2>Driver Profile</h2>
+                <p>Manage your public profile, vehicle information, and availability.</p>
+            </div>
+        </main>
+    </div>
+
+    <div id="rider-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-rider-name"></h2>
+            <div class="profile-details">
+                <p><strong>Rider Rating:</strong> <span id="modal-rider-rating"></span></p>
+                <p><strong>Average Rating Given to Drivers:</strong> <span id="modal-avg-rating"></span></p>
+                <h4>Feedback from Other Drivers:</h4>
+                <div id="modal-reviews-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="Rhapid LOGO-2 transparent.png" alt="Rhapid Logo" style="height: 40px; filter: invert(1);"></a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="rider-signup.html">Ride</a></li>
+                        <li><a href="signup.html">Drive</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Safety</h4>
+                    <ul>
+                        <li><a href="#">Our Commitment</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rhapid. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="onboarding-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Complete Your Driver Profile</h2>
+            <form id="onboarding-form" class="modern-form">
+                <div class="form-group">
+                    <label for="onboarding-name">Full Name</label>
+                    <input type="text" id="onboarding-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-pic-upload">Profile Picture</label>
+                    <input type="file" id="profile-pic-upload" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="carModel">Car Model</label>
+                    <input type="text" id="carModel" name="carModel" required>
+                </div>
+                <button type="submit" class="cta-button">Save Profile</button>
+            </form>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

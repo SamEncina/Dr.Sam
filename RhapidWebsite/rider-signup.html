@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up as a Rider - Rhapid</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <a href="index.html"><img src="Rhapid LOGO-2 transparent.png" alt="Rhapid Logo"></a>
+            <h2>Create Your Account</h2>
+        </div>
+        <form id="rider-signup-form" class="modern-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="hidden" name="role" value="rider" checked>
+            <button type="submit" class="cta-button">Sign Up</button>
+        </form>
+        <div class="signup-link">
+            <p>Already have an account? <a href="rider-login.html">Log in</a></p>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

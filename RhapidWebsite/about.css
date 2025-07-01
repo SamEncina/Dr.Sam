@@ -1,0 +1,45 @@
+.about-hero {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.founder-profile {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.founder-profile h4 {
+    font-style: normal;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.market-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}

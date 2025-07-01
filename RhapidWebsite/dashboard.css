@@ -1,0 +1,455 @@
+body {
+    background-color: var(--light-gray-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    display: flex;
+    padding-top: 80px; /* Height of header */
+    flex: 1;
+}
+
+.dashboard-sidebar {
+    width: 250px;
+    background: var(--background-color);
+    height: calc(100vh - 80px);
+    position: fixed;
+    padding: 2rem 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.sidebar-logo {
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-logo img {
+    height: 40px;
+}
+
+.profile-summary {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.profile-summary h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.dashboard-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-sidebar ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+}
+
+.dashboard-sidebar ul li.active a,
+.dashboard-sidebar ul li a:hover {
+    background: var(--light-gray-bg);
+    color: var(--primary-color);
+    border-left-color: var(--primary-color);
+}
+
+.dashboard-content {
+    margin-left: 250px;
+    padding: 2rem;
+    width: calc(100% - 250px);
+}
+
+.dashboard-tab-content {
+    display: none;
+}
+
+.dashboard-tab-content.active {
+    display: block;
+}
+
+.dashboard-content h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.dashboard-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.ride-card {
+    background: var(--background-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+}
+
+.ride-info h4 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.ride-info p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.ride-status p {
+    margin: 0;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.ride-status.upcoming p {
+    background-color: rgba(212, 175, 55, 0.2);
+    color: var(--primary-color);
+}
+
+.ride-status.completed p {
+    background-color: #e8e8e8;
+    color: #777;
+}
+
+.ride-booking-container {
+    display: flex;
+    gap: 2rem;
+    height: calc(100vh - 320px);
+}
+
+.booking-map {
+    flex: 3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.booking-form-container {
+    flex: 2;
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.modern-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.modern-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.modern-form input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modern-form input:disabled {
+    background: #f4f4f4;
+}
+
+.cta-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background: var(--primary-color);
+    color: var(--background-color);
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c8a445;
+}
+
+.ride-request-card {
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ride-request-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(184, 134, 11, 0.4), 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.request-details h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.request-details p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.request-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.accept-button {
+    background-color: #28a745;
+}
+
+.accept-button:hover {
+    background-color: #218838;
+}
+
+.decline-button {
+    background-color: #dc3545;
+}
+
+.decline-button:hover {
+    background-color: #c82333;
+}
+
+.view-profile-button {
+    background-color: #6c757d;
+}
+
+.view-profile-button:hover {
+    background-color: #5a6268;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-rating-display {
+    background: var(--light-gray-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile-rating-display h3 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.rating-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+#modal-reviews-container {
+    margin-top: 1rem;
+}
+
+.review {
+    border-top: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.review:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.review-header strong {
+    margin-right: 0.5rem;
+}
+
+.star-rating {
+    color: var(--primary-color);
+}
+
+.review-comment {
+    font-style: italic;
+    color: #555;
+}
+
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.recurring-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.recurring-details {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.driver-rating-overview {
+    display: flex;
+    background: var(--background-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.overall-rating {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #eee;
+    padding-right: 2rem;
+}
+
+.overall-rating .rating-score {
+    font-size: 3rem;
+}
+
+.rating-breakdown {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 2rem;
+}
+
+.rating-category {
+    text-align: center;
+}
+
+.rating-category p {
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+}
+
+.category-score {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.reviews-list {
+    margin-top: 1.5rem;
+}
+
+.dashboard-container + .main-footer .footer-logo {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .dashboard-sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+    }
+
+    .dashboard-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .ride-booking-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .driver-rating-overview, .rating-breakdown {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .overall-rating {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 0 0 1rem;
+    }
+
+    .rating-breakdown {
+        padding-left: 0;
+    }
+}
