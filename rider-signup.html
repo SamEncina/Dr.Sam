@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="914581156782-ajq42vl1iuje7vvh5gmo3kncqufrtobo.apps.googleusercontent.com">
+    <title>Sign Up to Ride with Rhapid | Your Personal Driver Awaits</title>
+    <meta name="description" content="Create your Rhapid account to book professional, on-demand drivers. Enjoy the convenience of a personal driver for errands, events, or your daily commute.">
+    <meta name="keywords" content="rider signup, book a driver, personal driver service, on-demand ride, rhapid account">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <a href="index.html"><img src="Rhapid LOGO-2 transparent.png" alt="Rhapid Logo"></a>
+            <h2>Create Your Account</h2>
+        </div>
+        <form id="rider-signup-form" class="modern-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="hidden" name="role" value="rider" checked>
+            <button type="submit" class="cta-button">Sign Up</button>
+        </form>
+        <div class="or-divider">
+            <span>or</span>
+        </div>
+        <button id="google-signup-btn" class="google-btn">
+            <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
+            Sign Up with Google
+        </button>
+        <div class="signup-link">
+            <p>Already have an account? <a href="rider-login.html">Log in</a></p>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

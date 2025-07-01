@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="914581156782-ajq42vl1iuje7vvh5gmo3kncqufrtobo.apps.googleusercontent.com">
+    <title>Become Your Own Driver with Rhapid | Drive on Your Terms</title>
+    <meta name="description" content="Want to become your own driver? Sign up with Rhapid and get the freedom to set your own hours, choose your rates, and be your own boss. Start your driving career today.">
+    <meta name="keywords" content="become a driver, be your own driver, drive for rhapid, driver signup, flexible driving job, driving career">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <a href="index.html"><img src="Rhapid LOGO-2 transparent.png" alt="Rhapid Logo"></a>
+            <h2>Become a Driver</h2>
+        </div>
+        <form id="signup-form" class="modern-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="hidden" name="role" value="driver" checked>
+            <button type="submit" class="cta-button">Create Account</button>
+        </form>
+        <div class="or-divider">
+            <span>or</span>
+        </div>
+        <button id="google-signup-btn" class="google-btn">
+            <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
+            Sign Up with Google
+        </button>
+        <div class="signup-link">
+            <p>Already have an account? <a href="driver-login.html">Log in</a></p>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
